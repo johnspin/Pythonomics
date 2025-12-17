@@ -25,14 +25,14 @@ if __name__ == "__main__":
 t = Timer("npmax(l)", "from __main__ import explicit, implicit, npmax; "
       "import random; import operator; import numpy as np;"
       "l = np.array([random.random() for _ in xrange(10000000)])")
-print "Npmax: %.2f msec/pass" % (1000  * t.timeit(number=10)/10 )
+print("Npmax: %.2f msec/pass" % (1000  * t.timeit(number=10)/10 ))
 
 t = Timer("explicit(l)", "from __main__ import explicit, implicit; "
       "import random; import operator;"
       "l = [random.random() for _ in xrange(10000000)]")
-print "Explicit: %.2f msec/pass" % (1000  * t.timeit(number=10)/10 )
+print("Explicit: %.2f msec/pass" % (1000  * t.timeit(number=10)/10 ))
 
 t = Timer("implicit(l)", "from __main__ import explicit, implicit; "
       "import random; import operator;"
       "l = [random.random() for _ in xrange(10000000)]")
-print "Implicit: %.2f msec/pass" % (1000  * t.timeit(number=10)/10 )
+print("Implicit: %.2f msec/pass" % (1000  * t.timeit(number=10)/10 ))
