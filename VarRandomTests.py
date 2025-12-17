@@ -2,10 +2,10 @@ import random as rnd
 import sys
 
 def PrintRNL(left, right, data):
-    print 'left', left, '|',
-    print 'right', right
-    print ' data', data
-    print
+    print('left', left, '|', end='')
+    print('right', right)
+    print(' data', data)
+    print()
 
 def DoAShuffle(left, right):
     ret = []
@@ -36,22 +36,22 @@ def CalcSplit(datLen, splitError=4):
 
 def SplitData(list):
     split = CalcSplit(len(list))
-    print
-    print 'Data size', len(list), ' Split location', split
-    print
+    print()
+    print('Data size', len(list), ' Split location', split)
+    print()
     return (list[0: split], list[split:])
 
 def RunRandRiffleShuffle(data,times=5):
     rnd.SystemRandom()
     left, right = SplitData(data)
-    print 'Iter 0'
+    print('Iter 0')
     PrintRNL(left, right, data)
 
     for i in range(1, times):
         data = DoAShuffle(left, right)
 
         left, right = SplitData(data)
-        print 'Iter ', i
+        print('Iter ', i)
         PrintRNL(left, right, data)
         left, right = SplitData(data)
 
