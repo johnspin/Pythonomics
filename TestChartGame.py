@@ -41,7 +41,8 @@ def DrawColumns(screen, data):
     print_space = w - 2 * (line_margin + min_col_space) # screen width - (l_margin + r_margin + 2 * min_col_space)
     col_incr = print_space // num_cols
     line_width = col_incr - min_col_space
-    print 'num_cols', num_cols, 'col_incr', col_incr, 'line_width', line_width
+    # print('num_cols', num_cols, 'col_incr', col_incr, 'line_width', line_width)
+    print(f"{num_cols=}  {col_incr=}  {line_width=}")
 
     curr_col = line_margin + col_incr + min_col_space
     scaling_ratio = GetScalingRatio(data, h-(2*line_width+min_col_space) )
@@ -54,7 +55,7 @@ def DrawColumns(screen, data):
 def GetScalingRatio(data, y_print_space):
     maxVal = max(data)
     scaling = max( [ y_print_space / maxVal, 1])
-    print 'scaling value', scaling
+    print(f"{scaling value=})
     return scaling
 
 column_data = [3,7,14,3,25,35,1000,99,125,45,45,40,35,17,19,23,29,31,37,41,43,16,2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,250,175,71,73,79,83,89,91,97]  #  ,250,175
@@ -66,7 +67,7 @@ def main():
     gray = (127, 127, 127, 255)
     screen = pygame.display.set_mode((w, h), pygame.RESIZABLE) # pygame.NOFRAME|
     videoInfo = pygame.display.Info()
-    print 'current_h', videoInfo.current_h, 'current_w',  videoInfo.current_w
+    print('current_h', videoInfo.current_h, 'current_w',  videoInfo.current_w)
     pygame.display.set_caption('First Pygame Title', 'My Icon Title')
     done = False
     is_blue = True
@@ -143,7 +144,7 @@ def main():
         #  set font
 
         videoInfo = pygame.display.Info()  #  stays the same even when the window is resized
-        print 'current_h', videoInfo.current_h, 'current_w', videoInfo.current_w
+        print('current_h', videoInfo.current_h, 'current_w', videoInfo.current_w)
 
         pygame.time.wait(2300)
         pygame.display.flip()
