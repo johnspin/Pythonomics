@@ -83,14 +83,14 @@ class CEvent:
 
     def on_event(self, event):
 
-        print '='*23
-        print 'Event Details:  Type -', type(event)
+        print('='*23)
+        print('Event Details:  Type -', type(event))
         # for key, val in event:
-        #     print 'val-->: ', val, 'key-->', key
+        #     print('val-->: ', val, 'key-->', key)
         for nm in dir(event):
-            print 'nm =', nm, ' --  event[nm] =', event[nm]
-        print '=' * 23
-        print
+            print('nm =', nm, ' --  event[nm] =', event[nm])
+        print('=' * 23)
+        print()
 
         if event.type == QUIT:
             self.on_exit()
