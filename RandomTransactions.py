@@ -83,9 +83,9 @@ def RunCommerce(times=100):
     consumers.sort()
     # global consumers
     # consumers = sorted(consumers)
-    print 'min =', min(consumers), '\nmax =', max(consumers)
-    print 'bot 10 \n\t', consumers[:10]
-    print 'top 10 \n\t', consumers[-10:]
+    print('min =', min(consumers), '\nmax =', max(consumers))
+    print('bot 10 \n\t', consumers[:10])
+    print('top 10 \n\t', consumers[-10:])
 
 def ATransaction():
     buyer = randint(0,len(consumers)-1) # randint(n,m)  a no. from n to m inclusive
