@@ -39,17 +39,17 @@ class CApp(cevent.CEvent):
         self.on_cleanup()
 
     def on_key_down(self, event):
-        print '=' * 23
-        print 'Event Details:  Type -', type(event)
-        print 'Object: ', dir(event)
-        print '=' * 23
-        print
+        print('=' * 23)
+        print('Event Details:  Type -', type(event))
+        print('Object: ', dir(event))
+        print('=' * 23)
+        print()
 
     def on_exit(self):
         self._running = False
 
 if __name__ == "__main__":
-    print 'Starting'
+    print('Starting')
     theApp = CApp()
     theApp.on_execute()
-    print 'Ending'
+    print('Ending')
